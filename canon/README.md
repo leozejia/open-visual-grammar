@@ -10,6 +10,9 @@ It is not a style prompt. It is a reusable answer to a visual problem.
 | --- | --- |
 | `conflict-poster` | Public feed covers need a sharp first read and one real conflict. |
 | `documentation-hero` | Public docs or tutorials need calm trust and operational clarity. |
+| `proof-screenshot` | The reader needs real UI or command proof. |
+| `editorial-illustration` | Essays and abstract narratives need mood, metaphor, or human scale. |
+| `minimal-poster` | One object, phrase, or spatial relationship can carry the idea. |
 
 ## Admission rule
 
