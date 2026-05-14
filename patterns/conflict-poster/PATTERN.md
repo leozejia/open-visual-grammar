@@ -1,6 +1,8 @@
 # Conflict Poster
 
-Conflict Poster is a high-signal cover canon for public feeds.
+Status: canonical
+
+Conflict Poster is a high-signal cover pattern for public feeds.
 
 It makes one argument visible before the viewer reads the article.
 
@@ -60,10 +62,10 @@ they should behave like texture.
 
 Warm-hot.
 
-This canon can carry attitude, but it should not become clickbait. The conflict
-must come from the article's real point.
+This pattern can carry attitude, but it should not become clickbait. The
+conflict must come from the article's real point.
 
-## Runtime compile slots
+## Runtime adapter slots
 
 When compiling into an image prompt, define:
 

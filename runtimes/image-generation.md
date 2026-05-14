@@ -12,7 +12,7 @@ Use these slots:
 Output:
 Audience:
 Visual job:
-Canon:
+Pattern:
 First read:
 Tension:
 Main subject:

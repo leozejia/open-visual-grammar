@@ -1,7 +1,7 @@
 # Visual Score
 
-A visual score is the task-specific plan that sits between a framework and a
-runtime prompt.
+A visual score is the task-specific plan that sits between a pattern and a
+runtime spec.
 
 It should be short enough to fit in working memory.
 
@@ -10,7 +10,7 @@ It should be short enough to fit in working memory.
 ```text
 Viewer:
 Job:
-Canon:
+Pattern:
 First read:
 Tension:
 Metaphor:
@@ -33,7 +33,7 @@ Forbidden:
 ```text
 Viewer: Beginner agent-tool user
 Job: Understand that long context has cost and state risk
-Canon: documentation-hero
+Pattern: documentation-hero
 First read: A long session becomes a managed handoff
 Tension: Saved context vs dirty context
 Metaphor: Desk with active notes, archived handoff, and a small cost ledger

@@ -1,34 +1,44 @@
 # Contributing
 
-This repository accepts methods and canons, not random prompts.
+This repository accepts visual grammar and validated patterns, not random
+prompts.
 
-## Add a canon
+## Add a pattern
 
 Create:
 
 ```text
-canon/<slug>/
-├── FRAMEWORK.md
+patterns/<slug>/
+├── PATTERN.md
 ├── anti-patterns.md
-└── refs/
+├── refs/
+├── adapters/
+└── examples/
 ```
 
-Before opening a pull request, make sure the canon answers:
+Before opening a pull request, make sure the pattern answers:
 
 - What visual problem does it solve?
 - What is stable across examples?
 - What references prove the pattern?
 - What does it refuse to do?
-- Which runtime can execute it?
+- Which runtimes can execute it?
 
 ## Add an example
 
-Examples should explain a finished result or useful failure.
+Examples should live inside the pattern they belong to:
+
+```text
+patterns/<slug>/examples/<example-slug>/
+├── score.md
+├── critique.md
+└── output.png
+```
 
 Include:
 
 - the source problem;
-- the selected canon;
+- the selected pattern;
 - the score;
 - the runtime;
 - the result;

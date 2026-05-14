@@ -1,6 +1,7 @@
 # Open Visual Grammar
 
-Open Visual Grammar is a method for turning visual intuition into executable generation.
+Open Visual Grammar is a method for turning visual intuition into executable
+generation.
 
 It is not a prompt library. A prompt is only one compiled form of a visual score.
 The durable asset is the grammar: the way a visual intention becomes tension,
@@ -26,42 +27,54 @@ Open Visual Grammar starts earlier:
 
 | Term | Meaning |
 | --- | --- |
-| Grammar | The shared visual method: tension, hierarchy, density, metaphor, rhythm, temperature. |
-| Canon | A stable visual pattern with references, constraints, and anti-patterns. |
-| Treatment | A surface treatment applied after a canon is chosen. It changes texture, medium, or finish, not the visual problem. |
-| Score | A task-specific visual plan. It may compile into a prompt, shader spec, deck layout, or scene brief. |
+| Grammar | Shared visual language: tension, hierarchy, density, metaphor, rhythm, temperature. |
+| Pattern | A reusable visual pattern with boundaries, references, adapters, and examples. |
+| Canonical | A maturity state for a tested pattern. It is not a top-level directory. |
+| Score | A task-specific visual plan that can compile into a prompt, shader spec, deck layout, or scene brief. |
 | Runtime | The execution surface: image model, HTML/CSS, slide deck, shader, video, game engine. |
 
 ## Repository map
 
 ```text
-canon/       Stable visual patterns. Load one canon at a time.
-treatments/  Optional surface treatments. Do not choose one before choosing a canon.
-methods/     Small visual-method notes. Read only when a decision needs it.
-runtimes/    How to compile a score for a target medium.
-examples/    Finished examples and postmortems, not random temporary prompts.
+grammar/     Cross-pattern visual language. Read only when a decision needs it.
+patterns/    Stable visual patterns. Load one pattern at a time.
+runtimes/    Cross-pattern execution constraints.
+decisions/   Architecture notes and project decisions.
 ```
+
+Examples live inside the pattern they belong to. One-off production prompts do
+not belong in this repository.
 
 ## Agent rule
 
 Use progressive disclosure:
 
 1. Read `AGENTS.md`.
-2. Choose exactly one canon from `canon/`.
-3. Read that canon's `FRAMEWORK.md`.
-4. Open references or anti-patterns only when needed.
+2. Choose exactly one pattern from `patterns/`.
+3. Read that pattern's `PATTERN.md`.
+4. Open its references, adapters, anti-patterns, or examples only when needed.
 5. Produce a task-specific score.
 6. Compile the score into the requested runtime.
 
 Do not load the whole repository into context.
 
+## Current stable patterns
+
+| Pattern | Use when |
+| --- | --- |
+| `conflict-poster` | Public feed covers need one sharp conflict and strong first read. |
+| `documentation-hero` | Public docs or tutorials need calm trust and operational clarity. |
+
+Candidate patterns stay in internal incubation until they have references,
+boundaries, and at least one useful production example.
+
 ## What belongs here
 
-- Stable visual frameworks.
-- Reference images that demonstrate the framework.
+- Stable visual patterns.
+- Reference images that demonstrate a pattern.
 - Anti-patterns and failure modes.
-- Runtime compile rules.
-- Finished examples that teach the grammar.
+- Runtime adapters and compile rules.
+- Pattern-local examples that teach the grammar.
 
 ## What does not belong here
 
@@ -70,6 +83,7 @@ Do not load the whole repository into context.
 - Rejected generations without analysis.
 - Private brand material.
 - Raw screenshots with secrets, accounts, or customer data.
+- Unvalidated style word lists.
 
 One-off production artifacts should live in the consuming project's work folder,
 not in this grammar repository.

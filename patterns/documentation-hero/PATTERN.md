@@ -1,6 +1,8 @@
 # Documentation Hero
 
-Documentation Hero is a calm explanatory canon for public docs and tutorials.
+Status: canonical
+
+Documentation Hero is a calm explanatory pattern for public docs and tutorials.
 
 It should make the document feel useful before the reader starts reading.
 
@@ -62,7 +64,7 @@ Quiet-warm.
 Documentation should feel competent, patient, and practical. It can have visual
 personality, but it should not feel like an advertisement.
 
-## Runtime compile slots
+## Runtime adapter slots
 
 When compiling into an image prompt, define:
 
