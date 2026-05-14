@@ -28,6 +28,7 @@ Open Visual Grammar starts earlier:
 | --- | --- |
 | Grammar | The shared visual method: tension, hierarchy, density, metaphor, rhythm, temperature. |
 | Canon | A stable visual pattern with references, constraints, and anti-patterns. |
+| Treatment | A surface treatment applied after a canon is chosen. It changes texture, medium, or finish, not the visual problem. |
 | Score | A task-specific visual plan. It may compile into a prompt, shader spec, deck layout, or scene brief. |
 | Runtime | The execution surface: image model, HTML/CSS, slide deck, shader, video, game engine. |
 
@@ -35,6 +36,7 @@ Open Visual Grammar starts earlier:
 
 ```text
 canon/       Stable visual patterns. Load one canon at a time.
+treatments/  Optional surface treatments. Do not choose one before choosing a canon.
 methods/     Small visual-method notes. Read only when a decision needs it.
 runtimes/    How to compile a score for a target medium.
 examples/    Finished examples and postmortems, not random temporary prompts.

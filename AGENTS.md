@@ -30,9 +30,10 @@ Then choose one canon. Do not read every canon by default.
 
 1. Read `README.md` for the vocabulary.
 2. Read only the relevant `canon/*/FRAMEWORK.md`.
-3. Read `methods/*` only when a specific visual decision is unclear.
-4. Read `runtimes/*` only for the target output medium.
-5. Avoid loading reference-heavy folders unless the task requires visual comparison.
+3. Read `treatments/*` only after a canon is selected and surface treatment matters.
+4. Read `methods/*` only when a specific visual decision is unclear.
+5. Read `runtimes/*` only for the target output medium.
+6. Avoid loading reference-heavy folders unless the task requires visual comparison.
 
 ## Canon requirements
 
