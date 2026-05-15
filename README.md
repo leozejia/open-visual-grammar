@@ -39,6 +39,8 @@ Open Visual Grammar starts earlier:
 grammar/     Cross-pattern visual language. Read only when a decision needs it.
 patterns/    Stable visual patterns. Load one pattern at a time.
 runtimes/    Cross-pattern execution constraints.
+evals/       Reusable evaluation cases and rubrics.
+docs/        Protocols and operating notes.
 decisions/   Architecture notes and project decisions.
 ```
 
@@ -68,6 +70,19 @@ Do not load the whole repository into context.
 Candidate patterns stay in internal incubation until they have references,
 boundaries, and at least one useful production example.
 
+## Evals
+
+Use `docs/evaluation-protocol.md` and `evals/` to test whether a pattern is
+stable across real generation runs.
+
+Evals are not image rankings. They are fixed situations for checking first
+read, visual tension, anti-template behavior, pattern transfer, and whether a
+real operator can choose among three meaningfully different candidates.
+
+Generated candidates and runtime prompts belong in the consuming project's work
+folder. Only reviewed learning should flow back into this repository as
+anti-patterns, adapters, or pattern-local examples.
+
 ## What belongs here
 
 - Stable visual patterns.
@@ -75,6 +90,7 @@ boundaries, and at least one useful production example.
 - Anti-patterns and failure modes.
 - Runtime adapters and compile rules.
 - Pattern-local examples that teach the grammar.
+- Evaluation cases and rubrics that test the grammar.
 
 ## What does not belong here
 

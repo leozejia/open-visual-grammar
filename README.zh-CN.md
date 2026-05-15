@@ -36,6 +36,8 @@ Open Visual Grammar 的顺序更靠前：
 grammar/     跨 pattern 的视觉语法。只有具体决策需要时再读。
 patterns/    稳定视觉范式。一次只加载一个。
 runtimes/    跨 pattern 的执行约束。
+evals/       可复用评测用例和判断标准。
+docs/        协议和操作说明。
 decisions/   架构说明和项目决策记录。
 ```
 
@@ -61,6 +63,14 @@ decisions/   架构说明和项目决策记录。
 
 候选范式先留在内部孵化区。只有拥有参考图、边界和至少一个有用生产案例后，才进入公开仓库。
 
+## Evals / 评测
+
+用 `docs/evaluation-protocol.md` 和 `evals/` 测试一个 pattern 是否能在真实生成中保持稳定。
+
+Evals 不是图片排行榜。它是一组固定场景，用来检查第一眼、视觉张力、反 AI 模板能力、pattern 迁移能力，以及真实 operator 能否从三张有策略差异的候选图里做判断。
+
+生成候选图和 runtime prompt 留在调用方项目的工作目录。只有经过复盘的稳定经验，才回流到本仓库，成为 anti-pattern、adapter 或 pattern 内案例。
+
 ## 什么应该进入这个仓库
 
 - 稳定视觉范式；
@@ -68,6 +78,7 @@ decisions/   架构说明和项目决策记录。
 - 反例和失败模式；
 - runtime adapter 和编译规则；
 - 能讲清楚方法的 pattern 内案例。
+- 能测试语法的评测用例和判断标准。
 
 ## 什么不应该进入这个仓库
 

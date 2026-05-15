@@ -34,7 +34,8 @@ Then choose one pattern. Do not read every pattern by default.
 3. Read that pattern's `adapters/*`, `examples/*`, refs, or anti-patterns only when needed.
 4. Read `grammar/*` only when a specific visual decision is unclear.
 5. Read `runtimes/*` only for the target output medium.
-6. Avoid loading reference-heavy folders unless the task requires visual comparison.
+6. Read `evals/*` only when testing or promoting a pattern.
+7. Avoid loading reference-heavy folders unless the task requires visual comparison.
 
 ## Pattern requirements
 
@@ -56,6 +57,14 @@ Every pattern should define:
 - boundaries and failure modes.
 
 Examples should live inside the pattern they belong to.
+
+## Eval rules
+
+Use `docs/evaluation-protocol.md` for long-term pattern evaluation.
+
+Eval cases and rubrics belong here. Real generated candidates, runtime prompts,
+API diagnostics, and rejected attempts belong in the consuming project's work
+folder unless they become reviewed pattern-local examples.
 
 ## Storage rules
 

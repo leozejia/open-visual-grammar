@@ -46,6 +46,38 @@ Include:
 
 Do not add raw prompt attempts without analysis.
 
+## Add an eval case
+
+Create:
+
+```text
+evals/cases/<case-slug>.md
+```
+
+An eval case should define:
+
+- the visual job;
+- the typical pattern, if one exists;
+- the scenario;
+- required score fields;
+- runtime target;
+- the three-candidate requirement;
+- pass and fail signals.
+
+Eval cases should be reusable and public-safe. Do not store runtime prompts or
+generated candidates in the case file.
+
+## Add a rubric
+
+Create:
+
+```text
+evals/rubrics/<rubric-slug>.md
+```
+
+A rubric should help an operator judge outputs consistently. It should include
+strong signals, weak signals, and review questions.
+
 ## Public-safety rules
 
 Do not commit:
