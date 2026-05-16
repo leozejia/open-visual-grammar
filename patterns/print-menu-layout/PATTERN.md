@@ -156,10 +156,11 @@ Item names and prices must be typeset with tabular numerals for price alignment.
 Descriptions are set smaller and in a muted color.
 
 Typography is part of the visual grammar, not an implementation afterthought.
-For the launch font contract and runtime packaging rules, see `typography.md`.
-The consuming project must use packageable open-source fonts as primary
-rendering assets and must not rely on macOS, Windows, or Linux system fonts for
-the intended appearance.
+For the candidate typography brief and runtime packaging rules, see
+`typography.md`. Specific font families are not production-approved until the
+operator reviews rendered samples. The consuming project must use packaged
+fonts for final output and must not rely on macOS, Windows, or Linux system
+fonts for the intended appearance.
 
 Print-scale sizes (on a 2550 × 3300 canvas):
 
@@ -205,12 +206,12 @@ A style direction defines:
 
 The four initial directions for Restaurant Menu:
 
-| Direction | Tradition | Launch typography | Signature detail |
+| Direction | Tradition | Typography status | Signature detail |
 | --- | --- | --- | --- |
-| Warm Cafe | Warm paper | Fraunces + Source Sans 3 | Hand-marked or brush divider |
-| Clean Modern | Editorial restraint | Newsreader + IBM Plex Sans | Thin editorial rule system |
-| Retro American | Diner energy | Bowlby One SC + Archivo | Ticket border and star ornaments |
-| Elegant Classic | Print ceremony | Bodoni Moda + Cormorant Garamond | Gold hairline and serif hierarchy |
+| Warm Cafe | Warm paper | candidate fonts pending review | Hand-marked or brush divider |
+| Clean Modern | Editorial restraint | candidate fonts pending review | Thin editorial rule system |
+| Retro American | Diner energy | candidate fonts pending review | Ticket border and star ornaments |
+| Elegant Classic | Print ceremony | candidate fonts pending review | Gold hairline and serif hierarchy |
 
 ## Runtime Adapter Slots
 

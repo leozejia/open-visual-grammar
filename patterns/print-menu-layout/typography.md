@@ -1,19 +1,18 @@
 # Typography: Print Menu Layout
 
-Status: candidate launch contract
+Status: candidate typography brief; font families pending operator review
 
-This document is the typography source of truth for the `print-menu-layout`
-pattern. It defines the visual voice and runtime constraints for fonts before a
-consuming project packages font files or writes renderer tokens.
+This document is the typography brief for the `print-menu-layout` pattern. It
+defines font roles and runtime constraints. Specific font families in this file
+are candidates until the operator reviews rendered PNG/PDF samples.
 
 字体是 `print-menu-layout` 的视觉语法，不是渲染器的随机 fallback。这里定义字体的视觉角色、开源边界和运行时约束；具体项目再把字体文件打包进自己的渲染环境。
 
 Architecture note: this file is pattern-local because Restaurant Menu is the
-first production pressure case. The generic OVG typography contract should be
-extracted by the OVG maintainer. See
-`../../docs/typography-contract-handoff.md`.
+first production pressure case. Generic typography roles and packaging rules
+live in `../../grammar/typography.md` and `../../runtimes/font-packaging.md`.
 
-## Decision
+## Architecture Decision
 
 Use packaged, open-source fonts for all primary Restaurant Menu output. Do not
 use host system fonts as the design target.
@@ -26,14 +25,14 @@ Reasons:
 - paid PNG/PDF output must be deterministic across local QA, CI, and server;
 - typography is a visible part of the deliverable's taste.
 
-Open-source does not mean visually generic. The selected faces must carry the
-named style direction.
+Open-source does not mean visually generic. The approved faces must carry the
+named style direction after visual review.
 
-## Launch Font Contract
+## Candidate Font Families
 
-These are launch candidates for the first paid Restaurant Menu wedge. They are
-specific enough for implementation, but still require real PNG/PDF inspection
-before the pattern can be promoted from candidate.
+These are candidates for review, not an approved launch contract. Use them to
+produce review samples only. Do not vendor them as production assets until the
+operator approves the rendered output.
 
 | Direction | Display role | Body / menu role | Voice |
 | --- | --- | --- | --- |
@@ -42,7 +41,7 @@ before the pattern can be promoted from candidate.
 | Retro American | Bowlby One SC | Archivo | bold diner vernacular without relying on Cooper Black |
 | Elegant Classic | Bodoni Moda | Cormorant Garamond | formal high-contrast ceremony without relying on Didot or Hoefler |
 
-Required implementation weights:
+Candidate weights for review samples:
 
 | Family | Minimum files |
 | --- | --- |
@@ -55,12 +54,12 @@ Required implementation weights:
 | Bodoni Moda | Regular, Semibold |
 | Cormorant Garamond | Regular, Semibold, Italic |
 
-Before vendoring files, verify the license for each downloaded package and keep
-the license text with the font files in the consuming project. Prefer upstream
-Google Fonts / official repository packages with clear SIL Open Font License or
-equivalent open terms.
+Before any production vendoring, verify the license for each downloaded package
+and keep the license text with the font files in the consuming project. Prefer
+upstream Google Fonts / official repository packages with clear SIL Open Font
+License or equivalent open terms.
 
-Reference source paths checked for this contract:
+Reference source paths to verify during review:
 
 | Family | Source path |
 | --- | --- |
@@ -73,9 +72,9 @@ Reference source paths checked for this contract:
 | Bodoni Moda | `https://github.com/google/fonts/tree/main/ofl/bodonimoda` |
 | Cormorant Garamond | `https://github.com/google/fonts/tree/main/ofl/cormorantgaramond` |
 
-The source directories include `OFL.txt`, but the consuming project must still
-copy the license file beside the vendored font files and record the exact
-download date.
+The source directories usually include `OFL.txt`, but the consuming project
+must still copy the license file beside any vendored font files and record the
+exact download date after approval.
 
 ## Role Rules
 
@@ -136,4 +135,4 @@ These are not solved by the launch font contract:
 - editable document formats.
 
 If any of these become product requirements, create a separate visual score or
-runtime adapter addition before changing the launch font contract.
+runtime adapter addition before changing the typography brief.

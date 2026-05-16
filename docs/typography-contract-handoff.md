@@ -1,6 +1,6 @@
 # Typography Contract Handoff
 
-Status: accepted and extracted
+Status: architecture extracted; font families pending operator review
 
 ## Why This Exists
 
@@ -25,16 +25,16 @@ Font packaging and deterministic output parity rules live in:
 runtimes/font-packaging.md
 ```
 
-The first pattern-local consumer is:
+The first pattern-local typography draft is:
 
 ```text
 patterns/print-menu-layout/typography.md
 ```
 
-That document records the MyPromptist Restaurant Menu role mapping:
+That document records the MyPromptist Restaurant Menu font-role problem:
 
 - avoid host system fonts as paid-output targets;
-- use packageable open-source fonts;
+- use packageable open-source fonts after review;
 - define font roles per style direction;
 - require vendored font files, license metadata, explicit runtime font paths,
   and local/CI/production parity checks.
@@ -90,16 +90,22 @@ For deterministic deliverables, a consuming project should:
 
 1. OVG uses `grammar/typography.md` and `runtimes/font-packaging.md`.
 2. OVG does not vendor font files.
-3. Pattern examples may name exact font families when production use proves the
-   choice useful.
+3. Pattern examples may name exact font families only when production use or
+   operator review proves the choice useful.
 4. Generic `script-fallback` exists now; deeper CJK/RTL rules can be added when
    real patterns need them.
 5. Deterministic render parity with packaged fonts is a promotion gate for
    fixed-format paid-output patterns.
 
-## MyPromptist Needs
+## MyPromptist Gate
 
-MyPromptist should consume OVG through:
+MyPromptist should not treat the current Restaurant Menu font-family list as an
+approved production contract.
+
+Before MP packages fonts or renders customer-facing menu output, the operator
+must review real PNG/PDF samples for each style direction.
+
+The eventual consumption path is:
 
 ```text
 CATALOG.md
@@ -109,6 +115,6 @@ patterns/print-menu-layout/typography.md
 runtimes/font-packaging.md
 ```
 
-It can now implement the practical packaging pass: download selected
-open-source fonts in the consuming project, keep licenses, configure Typst or
-the selected renderer with explicit font paths, and run local/server parity QA.
+Until review passes, MP may read these files to understand the architecture,
+but should not vendor the candidate font families as final assets or claim
+deterministic typography is ready for production.
