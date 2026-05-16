@@ -1,48 +1,4 @@
-# Visual Score
-
-A visual score is the task-specific plan that sits between a pattern and a
-runtime spec.
-
-It should be short enough to fit in working memory.
-
-## Minimal score
-
-```text
-Visual job:
-Primary source:
-Supporting sources:
-Source inclusion rule:
-Viewer:
-Job:
-Pattern:
-Reader pain:
-False belief:
-Correction:
-First read:
-Tension:
-Concrete evidence:
-Visual action:
-Why it bites:
-Title relationship:
-Poster temperament:
-Visual language notes:
-Density:
-Temperature:
-Runtime:
-Review questions:
-```
-
-## Rules
-
-- The score should not contain a full production prompt.
-- The score should make the visual decision reviewable before generation.
-- Public covers should include the argument fields before generation.
-- The score can compile to different runtimes.
-- The score is temporary unless it becomes a reviewed example.
-- If the evidence object could fit ten unrelated topics, revise the visual
-  judgment before compiling.
-
-## Example
+# Token Economics Big Character Poster
 
 ```text
 Visual job: X Article cover, 1500x600
@@ -56,15 +12,15 @@ Reader pain: The user sees high cache hit and assumes the long session is health
 False belief: More retained context is always better if cache hit is high
 Correction: Cached context still has a price, and stale context can become state debt
 First read: 上下文不是越多越好
-Tension: High cache hit feels cheap vs long context can still cost money and carry stale state
+Conflict pair: high cache hit feels cheap vs long context can still cost money and carry stale state
 Concrete evidence: a bill/receipt surface showing cached input as a paid line item, plus a long session record
 Visual action: cached history that looked useful turns into a visible bill and state burden around the headline
-Why it bites: The same thing that looked like an asset becomes a liability
+Why it bites: the same thing that looked like an asset becomes a liability
 Title relationship: the headline acts like a stamped public warning, with evidence pressed close enough to prove the claim
 Poster temperament: rough editorial warning poster, not dashboard explainer
 Visual language notes: paper receipt, red pencil marks, black headline ink, off-white texture, one concrete cost artifact
 Density: Low-medium
 Temperature: Warm-hot but educational
-Runtime: Image generation, X Article cover
+Runtime: Image generation for X Article cover
 Review questions: Does the bill make the cache-cost pain concrete? Does the title feel like a public correction?
 ```

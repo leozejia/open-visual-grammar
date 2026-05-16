@@ -17,14 +17,14 @@ and examples.
 
 ## Rationale
 
-Earlier drafts separated `canon/`, `examples/`, and optional surface treatments
-into top-level directories. That made the system look more complete than it was
-and encouraged agents to jump across the repository.
+Earlier drafts separated `canon/` and `examples/` into top-level directories.
+That made the system look more complete than it was and encouraged agents to
+jump across the repository.
 
 The cleaner model is closer to a domain aggregate:
 
 ```text
-Pattern = definition + boundaries + references + adapters + examples
+Pattern = invariants + boundaries + references + adapters + examples
 ```
 
 Global `grammar/` stays small and only holds cross-pattern visual language.
@@ -36,5 +36,6 @@ constraints.
 - `canon` is no longer a top-level directory.
 - `canonical` is a maturity state, not a folder name.
 - Examples live inside their pattern.
-- Candidate styles and unvalidated treatments stay outside the public repository.
-- Public patterns should have real references before they are added.
+- Candidate pattern seeds can live under `patterns/` when they preserve reusable
+  visual invariants.
+- Public canonical patterns should have real references before promotion.

@@ -4,15 +4,14 @@ A runtime is where the score executes.
 
 Current runtime notes:
 
-| Runtime | File |
-| --- | --- |
-| Image generation | `image-generation.md` |
-| Shader | `shader.md` |
+| Runtime | File | Good at |
+| --- | --- | --- |
+| Image generation | `image-generation.md` | Mood, texture, metaphor, broad composition |
+| Deterministic layout | `deterministic-layout.md` | Exact text, exact hierarchy, exact dimensions, repeatable output |
+| Shader | `shader.md` | Continuous fields, light, material, motion, invisible systems |
 
 Future runtimes may include:
 
 - slide decks;
-- HTML/CSS scenes;
 - video;
-- game engines;
-- deterministic diagrams.
+- game engines.

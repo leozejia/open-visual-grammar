@@ -21,10 +21,11 @@ Then choose one pattern. Do not read every pattern by default.
 ## Operating principles
 
 - Visual taste is subjective, but generation needs constraints.
-- Name the visual problem before naming a style.
+- Name the visual pattern before compiling a prompt.
 - A prompt is a compiled artifact, not the source of truth.
-- A pattern enters this repository only after it has references, boundaries, and repeatable structure.
-- Candidate styles and one-off production prompts stay outside the public grammar.
+- A pattern is defined by reusable visual invariants and transfer boundaries.
+- A pattern can recommend use cases, but it is not locked to one channel or scene.
+- One-off production prompts stay outside the public grammar.
 - Keep examples public-safe. Do not include credentials, private screenshots, user data, or internal account details.
 
 ## Progressive disclosure
@@ -47,14 +48,16 @@ Every public pattern must include:
 
 Every pattern should define:
 
-- use cases;
-- visual problem;
 - invariants;
-- composition model;
+- transfer boundaries;
+- recommended use cases;
+- weak-fit cases;
+- composition behavior;
+- material and texture;
 - information density;
 - emotional temperature;
 - runtime adapter slots;
-- boundaries and failure modes.
+- failure modes.
 
 Examples should live inside the pattern they belong to.
 

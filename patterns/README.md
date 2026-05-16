@@ -1,26 +1,38 @@
 # Patterns
 
-A pattern is a reusable visual answer to a recurring visual problem.
+A pattern is a reusable visual abstraction.
 
-It is stronger than a style preset because it defines:
+It is defined by stable visual invariants:
 
-- when to use it;
-- when not to use it;
-- what visual problem it solves;
-- which structure stays stable;
-- what references prove it;
-- how it adapts to runtimes.
+- first read;
+- hierarchy;
+- composition behavior;
+- material and texture;
+- density;
+- emotional temperature;
+- transfer boundaries;
+- failure modes.
 
-## Current patterns
+Recommended scenes help agents choose. They do not lock a pattern to one
+channel.
 
-| Pattern | Status | Use when |
+## Current Patterns
+
+| Pattern | Status | Invariants |
 | --- | --- | --- |
-| `conflict-poster` | canonical | Public feed covers need one sharp conflict and strong first read. |
-| `documentation-hero` | canonical | Public docs or tutorials need calm trust and operational clarity. |
+| `big-character-poster` | canonical | Dominant headline, public attitude, concrete evidence, rough print energy, strong first read. |
+| `print-menu-layout` | candidate | Print-ready hierarchy, menu sections, price scanning, hospitality print tone. |
+| `eastern-texture-handdrawn` | seed | Chinese paper texture, loose handdrawn line, low saturation, metaphor and whitespace. |
+| `pixel-retro` | seed | Pixel blocks, retro game logic, clear silhouette, geek/tool atmosphere. |
+| `narrative-journal-infographic` | seed | Handdrawn timeline, comparison, workflow, notes, readable structure. |
+| `whimsical-journal-sketch` | seed | Watercolor sketch, marker texture, collage, casual warmth. |
+| `flowing-gaze-minimal-cover` | seed | One subject, negative space, unusual viewpoint, pen/etching texture. |
+| `minimal-handdrawn-linework` | seed | Clean linework, controlled contrast, low saturation, premium restraint. |
 
-## Candidate policy
+## Candidate Policy
 
-Candidate patterns do not live here by default.
+Candidate patterns may live here as seeds when they preserve reusable visual
+DNA. Mark their status clearly.
 
-Keep candidates in an internal incubation space until they have references,
-boundaries, and at least one useful production example.
+Do not promote a pattern only because a model produced an attractive image once.
+The reusable object is the method, not the generated output.

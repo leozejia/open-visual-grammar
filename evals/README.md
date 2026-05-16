@@ -3,35 +3,51 @@
 This directory contains reusable evaluation cases and rubrics for Open Visual
 Grammar.
 
-Evals are not image rankings. They are controlled situations that reveal
-whether a visual pattern is stable, transferable, and useful.
+Evals are not image rankings and not model benchmarks. They are controlled
+situations that reveal whether a visual pattern is stable, transferable, and
+useful.
 
-## Directory map
+## Directory Map
 
 ```text
-cases/      Fixed evaluation scenarios.
+cases/      Fixed reproduction scenarios.
 rubrics/    Judgment guides for operator review.
 ```
 
-## How to use
+## How To Use
 
 1. Choose one case from `cases/`.
-2. Choose one pattern from `patterns/`.
-3. Produce a task-specific score.
-4. Compile it into the target runtime.
-5. Generate three candidates in the consuming project.
-6. Judge with the rubrics.
-7. Feed stable learning back into the pattern.
+2. Use the pattern named by that case.
+3. Produce a visual argument stack.
+4. Produce a task-specific score.
+5. Compile it into the target runtime.
+6. Generate three candidates in the consuming project.
+7. Judge with the rubrics.
+8. Feed stable learning back into the pattern.
 
 Runtime prompts, generated images, and rejected candidates belong in the
 consuming project's work folder, not here.
 
-## First suite
+## First Suite
 
-Run these five cases before treating a pattern as broadly stable:
+Start with:
 
-- `conflict-poster-x-cover.md`
-- `concept-explainer-x-cover.md`
-- `documentation-hero.md`
-- `proof-screenshot.md`
-- `non-coding-agent-use.md`
+```text
+cases/big-character-poster-reproduction.md
+```
+
+This first suite tests whether the big-character poster method can reproduce
+the historical GanFan / SorryCode cover quality across old and new topics.
+
+Judge it with:
+
+```text
+rubrics/visual-argument.md
+rubrics/first-read.md
+rubrics/visual-tension.md
+rubrics/anti-ai-template.md
+rubrics/pattern-transfer.md
+```
+
+Do not add broader visual jobs to the public eval suite until this method is
+stable.

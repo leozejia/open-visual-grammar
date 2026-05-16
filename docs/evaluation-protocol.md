@@ -3,35 +3,34 @@
 Visual Grammar Evals are the long-term calibration system for Open Visual
 Grammar.
 
-They do not rank images. They test whether a pattern can repeatedly turn a
-visual problem into useful generated candidates across topics, channels, and
-operators.
+They do not rank images and do not benchmark image-model capability. They test
+whether a visual method can be reproduced across topics by another operator.
 
 ## Purpose
 
 Use evals to decide whether a pattern is:
 
 - stable enough to stay public;
-- too narrow and needs sharper boundaries;
+- too broad and needs sharper invariants;
 - missing runtime adapters or anti-patterns;
 - ready to receive a reviewed example;
 - not yet a pattern and should stay in incubation.
 
-## What evals test
+## What Evals Test
 
 Every eval run should test the full path:
 
 ```text
-visual problem -> pattern -> score -> runtime prompt -> three candidates -> operator judgment -> grammar improvement
+visual method -> visual job -> input contract -> visual argument -> score -> runtime prompt -> three candidates -> operator judgment -> grammar improvement
 ```
 
 The grammar is the durable object. Runtime prompts are execution artifacts.
 
-## Repository boundary
+## Repository Boundary
 
 Open Visual Grammar stores:
 
-- eval cases;
+- reproduction cases;
 - rubrics;
 - promotion rules;
 - public-safe reviewed examples;
@@ -50,68 +49,92 @@ Consuming projects store:
 Do not store one-off production prompts or raw generated candidates in this
 repository unless they become reviewed pattern-local examples.
 
-## Required eval run
+## Required Eval Run
 
-For each case:
+For each topic:
 
 1. Select one pattern.
-2. Produce a short visual score.
-3. Compile the score for one runtime.
-4. Generate exactly three candidates.
-5. Attach a short rationale to each candidate.
-6. Let an operator choose, reject, or request another run.
-7. Record what the run teaches the pattern.
+2. Define the visual job and input contract.
+3. Produce a visual argument stack from the primary source.
+4. Produce a short visual score.
+5. Compile the score for one runtime.
+6. Generate exactly three candidates.
+7. Make the three candidates different visual-language solutions for the same
+   article argument.
+8. Let an operator choose, reject, or request another run.
+9. Record what the run teaches the pattern.
 
-The three candidates must be meaningfully different strategies, not minor
-palette or texture variants.
+The three candidates should preserve the same source contract and article
+argument, but they may vary evidence object, title relationship, poster
+temperament, metaphor distance, and material language.
 
-## Minimum suite
+The visual argument must stay constant across the three candidates. A run that
+changes the claim for each candidate is testing ideas, not pattern stability.
 
-A first stability pass should include at least five cases:
+The input contract must also stay constant across the three candidates. A run
+that quietly changes source scope between candidates is testing context luck,
+not pattern stability.
 
-- conflict X cover;
-- concept explainer X cover;
-- documentation hero;
-- proof screenshot or proof-led tutorial visual;
-- non-coding agent use case.
+## First Stability Suite
 
-This gives the suite enough range to test conflict, abstraction, trust,
-proof, and cross-audience transfer.
+The first public stability pass focuses on one method:
 
-## Stability criteria
+```text
+patterns/big-character-poster/
+```
+
+Use `evals/cases/big-character-poster-reproduction.md`.
+
+This suite exists to answer one question:
+
+```text
+Can the big-character poster method reproduce the historical cover quality
+across old and new topics?
+```
+
+It should not expand into documentation heroes, proof screenshots, non-coding
+agent adoption, or other visual jobs until the first pattern is stable.
+
+## Stability Criteria
 
 A pattern can be considered stable when it has passed:
 
 - at least three different topics;
-- at least two delivery contexts or aspect ratios;
-- at least three real generation runs;
+- at least two real generation runs;
+- at least one unseen topic;
 - at least one operator-selected production candidate;
 - at least one documented anti-pattern or adapter improvement from real use;
 - enough clarity that another agent can apply it without private context.
 
-## Failure criteria
+## Failure Criteria
 
 An eval fails when:
 
+- the visual job or primary source is unclear;
 - the pattern cannot create a strong first read;
-- the candidates collapse into generic AIGC templates;
+- the topic was compiled before a visual argument existed;
+- the visual action is a generic object instead of a verb;
+- the title becomes a caption instead of the visual structure;
+- candidates collapse into generic AIGC templates;
+- three candidates are merely style variants;
 - the runtime prompt becomes the source of truth;
-- the pattern needs private brand context to make sense;
 - the operator cannot explain why one candidate is better;
-- the output is attractive but does not solve the visual problem.
+- the output is attractive but does not preserve the method's invariants.
 
 Failure is useful. Convert repeated failures into boundaries, anti-patterns,
 adapters, or case revisions.
 
-## Run record template
+## Run Record Template
 
 Consuming projects should record eval runs with this structure:
 
 ```text
 # Visual Grammar Eval Run
 
-## Case
-## Pattern Used
+## Pattern
+## Visual Job
+## Input Contract
+## Visual Argument
 ## Visual Score
 ## Runtime
 ## Three Candidates

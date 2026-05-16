@@ -3,11 +3,11 @@
 Open Visual Grammar treats generated visuals as a sequence:
 
 ```text
-intent -> tension -> score -> runtime spec -> output -> critique
+intent -> input contract -> visual argument -> tension -> score -> runtime spec -> output -> critique
 ```
 
-The middle step is the important one. If the score is weak, a stronger model
-usually makes a more polished version of the wrong idea.
+The middle steps are the important ones. If the argument is weak, a stronger
+model usually makes a more polished version of the wrong idea.
 
 ## 1. Intent
 
@@ -23,7 +23,27 @@ Common jobs:
 - create atmosphere for a story;
 - demonstrate motion, material, or effect behavior.
 
-## 2. Tension
+## 2. Visual argument
+
+Name the correction the visual must make visible.
+
+For public covers, do not jump from topic to style. First write:
+
+```text
+visual job -> primary source -> reader pain -> false belief -> correction -> visual action
+```
+
+The visual action should be a verb, not just an object. A bridge bending under
+cost is stronger than a bridge beside a title. A grey mask cut open by a cursor
+is stronger than a grey plugin icon.
+
+Use `visual-argument.md` when the output depends on a public hook, a cover, or
+an editorial claim.
+
+The primary source is the smallest material that should drive this asset. Add
+supporting sources only when they materially change the asset's judgment.
+
+## 3. Tension
 
 Tension is the reason the viewer keeps looking.
 
@@ -37,7 +57,7 @@ Examples:
 
 Good tension has one center. Bad tension stacks unrelated ideas.
 
-## 3. Hierarchy
+## 4. Hierarchy
 
 Every visual should have a first read, second read, and optional third read.
 
@@ -47,7 +67,7 @@ Every visual should have a first read, second read, and optional third read.
 
 Do not let details compete with the first read.
 
-## 4. Density
+## 5. Density
 
 Density is how much information the surface carries.
 
@@ -55,7 +75,7 @@ Low density works for mood, premium identity, and one sharp claim.
 Medium density works for documentation hero images and concept explainers.
 High density works only when the density itself is the point.
 
-## 5. Metaphor distance
+## 6. Metaphor distance
 
 A visual metaphor can be near or far from the literal topic.
 
@@ -66,7 +86,7 @@ A visual metaphor can be near or far from the literal topic.
 Use near metaphors for beginner education. Use farther metaphors only when the
 audience already understands the topic or the work is intentionally editorial.
 
-## 6. Emotional temperature
+## 7. Emotional temperature
 
 Choose the emotional temperature before choosing colors.
 
@@ -78,13 +98,12 @@ Choose the emotional temperature before choosing colors.
 Channel matters. X covers can run hotter. Documentation heroes should stay
 calmer unless the product voice demands otherwise.
 
-## 7. Runtime fit
+## Grammar Files
 
-Do not ask a runtime to do what it is bad at.
-
-- Image models are good at mood, texture, metaphor, and broad layout.
-- Deterministic layout tools are better for exact text, diagrams, charts, and UI.
-- Shaders are good at continuous motion, material, light, and field behavior.
-- Slide runtimes are good at sequencing and argument structure.
-
-Compile the score to the runtime. Do not force every idea into a bitmap prompt.
+| File | Contents |
+| --- | --- |
+| `score.md` | The Visual Score template and rules |
+| `visual-argument.md` | Cover-level argument stack: pain, false belief, correction, visual action |
+| `density.md` | Information density levels and when to use each |
+| `metaphor-distance.md` | Metaphor distance (near, medium, far) |
+| `design-references.md` | Named visual traditions for use in scores; absorbed from external design sources |
