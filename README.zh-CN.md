@@ -45,6 +45,9 @@ decisions/   架构说明和项目决策记录。
 
 案例跟随对应 pattern 存放。一次性生产 prompt 不进入这个仓库。
 
+Pattern slug 使用英文 kebab-case，保证路径、工具调用和 GitHub 链接稳定。
+面向人的 `PATTERN.md` 采用单文件中英双语：中文和英文都是一等工作语言。
+
 ## Agent 使用原则
 
 渐进披露，不要一次把所有上下文塞进去：

@@ -46,6 +46,10 @@ decisions/   Architecture notes and project decisions.
 Examples live inside the pattern they belong to. One-off production prompts do
 not belong in this repository.
 
+Pattern slugs use English kebab-case for stable file paths and tool references.
+Human-facing pattern documents are bilingual in the same `PATTERN.md`: Chinese
+and English are both first-class operating languages.
+
 ## Agent Rule
 
 Use progressive disclosure:

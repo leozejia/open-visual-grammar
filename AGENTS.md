@@ -40,6 +40,12 @@ Then choose one pattern. Do not read every pattern by default.
 
 ## Pattern requirements
 
+Pattern slugs, directory names, and machine-facing IDs use English kebab-case.
+
+Pattern documents are bilingual by default. Keep Chinese and English in the same
+`PATTERN.md` so agents load one source of truth and the two languages do not
+drift.
+
 Every public pattern must include:
 
 - `PATTERN.md`
@@ -48,6 +54,7 @@ Every public pattern must include:
 
 Every pattern should define:
 
+- Chinese name and English name;
 - invariants;
 - transfer boundaries;
 - recommended use cases;
@@ -58,6 +65,11 @@ Every pattern should define:
 - emotional temperature;
 - runtime adapter slots;
 - failure modes.
+
+Chinese is not an appendix. Treat it as an equal operating language for taste,
+audience, and production judgment. English keeps the project accessible to
+external tools and contributors; Chinese preserves the visual vocabulary used in
+GanFan / SorryCode production.
 
 Examples should live inside the pattern they belong to.
 

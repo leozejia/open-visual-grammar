@@ -16,6 +16,10 @@ It is defined by stable visual invariants:
 Recommended scenes help agents choose. They do not lock a pattern to one
 channel.
 
+Pattern slugs and directories use English kebab-case. Each `PATTERN.md` should
+be bilingual in one file, with Chinese and English names, definition,
+invariants, fit, weak-fit, and avoid rules.
+
 ## Current Patterns
 
 | Pattern | Status | Invariants |
