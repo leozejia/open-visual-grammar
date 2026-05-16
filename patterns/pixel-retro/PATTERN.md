@@ -1,5 +1,18 @@
 # Pixel Retro
 
+```yaml
+id: pixel-retro
+status: seed
+artifact_kinds:
+  - image-cover
+runtimes:
+  - image-generation
+when_to_use: Playful technical systems, tool paths, runtime cost, and choices that can become game-system logic.
+avoid_when: Premium corporate documents, fine emotional essays, realistic product proof, or calm institutional docs.
+load_next:
+  references: refs/README.md
+```
+
 中文名：像素复古风
 English name: Pixel Retro
 

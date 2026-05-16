@@ -77,7 +77,7 @@ not pattern stability.
 
 ## First Stability Suite
 
-The first public stability pass focuses on one method:
+The first public stability suite focuses on one method:
 
 ```text
 patterns/big-character-poster/
@@ -92,8 +92,9 @@ Can the big-character poster method reproduce the historical cover quality
 across old and new topics?
 ```
 
-It should not expand into documentation heroes, proof screenshots, non-coding
-agent adoption, or other visual jobs until the first pattern is stable.
+Keep this suite narrow. If another artifact kind or pattern needs evaluation,
+create a separate case with its own source contract, runtime target, and
+rubrics.
 
 ## Stability Criteria
 

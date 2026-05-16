@@ -13,10 +13,10 @@ progressively disclosed.
 Start with:
 
 ```text
-README.md
+CATALOG.md
 ```
 
-Then choose one pattern. Do not read every pattern by default.
+Then open exactly one registry route. Do not read every pattern by default.
 
 ## Operating principles
 
@@ -25,18 +25,24 @@ Then choose one pattern. Do not read every pattern by default.
 - A prompt is a compiled artifact, not the source of truth.
 - A pattern is defined by reusable visual invariants and transfer boundaries.
 - A pattern can recommend use cases, but it is not locked to one channel or scene.
+- Registry files own routing. Patterns own visual method. Runtimes own execution
+  contracts. Grammar owns shared vocabulary.
 - One-off production prompts stay outside the public grammar.
 - Keep examples public-safe. Do not include credentials, private screenshots, user data, or internal account details.
 
 ## Progressive disclosure
 
-1. Read `README.md` for the vocabulary.
-2. Read only the relevant `patterns/*/PATTERN.md`.
-3. Read that pattern's `adapters/*`, `examples/*`, refs, or anti-patterns only when needed.
-4. Read `grammar/*` only when a specific visual decision is unclear.
-5. Read `runtimes/*` only for the target output medium.
-6. Read `evals/*` only when testing or promoting a pattern.
-7. Avoid loading reference-heavy folders unless the task requires visual comparison.
+1. Read `CATALOG.md`.
+2. Choose one artifact kind and open one `registry/*.md`.
+3. Read only the routed `patterns/*/PATTERN.md`, unless the registry explicitly
+   allows a no-pattern route for that artifact kind.
+4. Read that pattern's named adapter, refs, typography, examples, or
+   anti-patterns only when the route or task needs them.
+5. Read `grammar/*` only when a selected pattern or route names a specific
+   grammar dependency.
+6. Read `runtimes/*` only when compiling to that execution surface.
+7. Read `evals/*` only when testing or promoting a pattern.
+8. Avoid loading reference-heavy folders unless the task requires visual comparison.
 
 ## Pattern requirements
 
@@ -49,12 +55,16 @@ drift.
 Every public pattern must include:
 
 - `PATTERN.md`
-- `anti-patterns.md`
-- `refs/` with at least one public-safe reference image
+
+Every pattern should include public-safe refs once it has operator-approved
+production output. `anti-patterns.md` is required only for canonical patterns or
+for patterns with repeated, stable failure modes. Do not create anti-pattern
+files just to satisfy structure.
 
 Every pattern should define:
 
 - Chinese name and English name;
+- metadata block for agent routing;
 - invariants;
 - transfer boundaries;
 - recommended use cases;

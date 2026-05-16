@@ -106,4 +106,6 @@ calmer unless the product voice demands otherwise.
 | `visual-argument.md` | Cover-level argument stack: pain, false belief, correction, visual action |
 | `density.md` | Information density levels and when to use each |
 | `metaphor-distance.md` | Metaphor distance (near, medium, far) |
+| `typography.md` | Type roles, hierarchy, script fallback, and typography failure modes |
+| `motion.md` | Reveal, pressure, transition, rhythm, and interaction over time |
 | `design-references.md` | Named visual traditions for use in scores; absorbed from external design sources |

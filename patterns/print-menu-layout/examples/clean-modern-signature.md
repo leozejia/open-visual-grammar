@@ -49,10 +49,10 @@ Output format:     PNG + PDF
 Output dimensions: 2550 × 3300 px / US Letter portrait
 
 Hierarchy:
-  Level 1 (restaurant name):     178 px, Baskerville serif, regular, tracking -0.02em
-  Level 2 (section labels):      38 px, Avenir Next sans, semibold, tracking 0.06em uppercase
-  Level 3 (item names + prices): 50 px, Avenir Next sans, regular, tabular nums
-  Level 4 (descriptions):        34 px, Avenir Next sans, regular, muted color
+  Level 1 (restaurant name):     178 px, Newsreader, regular, tracking -0.02em
+  Level 2 (section labels):      38 px, IBM Plex Sans, semibold, tracking 0.06em uppercase
+  Level 3 (item names + prices): 50 px, IBM Plex Sans, regular, tabular nums
+  Level 4 (descriptions):        34 px, IBM Plex Sans, regular, muted color
 
 Style direction:   clean-modern
   Background:      #e6e1d7
@@ -62,8 +62,9 @@ Style direction:   clean-modern
   Accent:          #2f5b4f
   Secondary accent: #e8ece3
   Rule color:      #bbb0a4
-  Heading font:    Baskerville, 'Iowan Old Style', Georgia, serif
-  Body font:       'Avenir Next', Helvetica, sans-serif
+  Display font:    Newsreader
+  Body font:       IBM Plex Sans
+  Accent font:     IBM Plex Sans
 
 Composition model: Rule
 Signature detail:  Thin editorial hairline — a single-pixel or 0.5pt rule in

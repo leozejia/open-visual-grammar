@@ -1,5 +1,18 @@
 # Whimsical Journal Sketch
 
+```yaml
+id: whimsical-journal-sketch
+status: seed
+artifact_kinds:
+  - image-cover
+runtimes:
+  - image-generation
+when_to_use: Warm, lightly playful journal-collage images using daily-life fragments to make ideas approachable.
+avoid_when: Serious financial warnings, strong public arguments, product proof, or strict technical tutorials.
+load_next:
+  references: refs/README.md
+```
+
 中文名：奇思妙想手账画师
 English name: Whimsical Journal Sketch
 

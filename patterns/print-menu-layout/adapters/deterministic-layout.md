@@ -48,8 +48,10 @@ Style direction:   [warm-cafe | clean-modern | retro-american | elegant-classic]
   Accent:
   Secondary accent:
   Rule color:
-  Heading font:
-  Body font:
+  Display font:     [packaged primary family]
+  Body font:        [packaged primary family]
+  Accent font:      [packaged primary family]
+  Font package:     [source, license, runtime path]
 
 Typography scale:  [standard | dense — determined by item count]
   Restaurant name:
@@ -68,6 +70,8 @@ Forbidden:
   - decorative elements outside the named style direction
   - web-scale font sizes on a print canvas
   - centered alignment except where the direction requires it
+  - host system fonts as the intended primary appearance
+  - runtime network font fetching for customer deliverables
 ```
 
 ## Density Switch Rule
@@ -88,6 +92,19 @@ All prices must use tabular numerals and align to a consistent right column
 within each section. The gutter between item name and price must be visually
 unambiguous — not just a space character.
 
+## Font Packaging Rule
+
+The renderer must load the exact font files selected by the visual score. A
+font stack is not a permission to accept whatever happens to exist on the host.
+For production deliverables, a missing primary font is a QA failure.
+
+Consuming projects should vendor the font files, keep license/source metadata
+with them, load them from an explicit runtime font path, and disable system
+font lookup when the engine supports that. Local, CI, and production output
+must be rendered with the same font package.
+
+The launch font contract for this pattern lives in `../typography.md`.
+
 ## Signature Detail Rule
 
 Each style direction has exactly one signature detail. It must appear in the
@@ -102,7 +119,7 @@ output. It must not be multiplied or varied across variants.
 
 ## Variant Behavior
 
-All four variants of a direction share the same color tokens, font stacks, and
+All four variants of a direction share the same color tokens, font role mapping, and
 signature detail. Variants differ only in spacing, type scale, and decoration
 density.
 

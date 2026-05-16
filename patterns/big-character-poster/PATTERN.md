@@ -1,5 +1,19 @@
 # Big Character Poster
 
+```yaml
+id: big-character-poster
+status: canonical
+artifact_kinds:
+  - image-cover
+runtimes:
+  - image-generation
+when_to_use: Public feed covers where a short title, concrete evidence object, and sharp correction should carry the first read.
+avoid_when: Neutral documentation heroes, exact UI proof, calm premium pages, or layouts that need deterministic text rendering.
+load_next:
+  image-generation: adapters/image-generation.md
+  references: refs/README.md
+```
+
 中文名：大字报
 English name: Big Character Poster
 

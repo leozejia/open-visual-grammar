@@ -1,5 +1,24 @@
 # Print Menu Layout
 
+```yaml
+id: print-menu-layout
+status: candidate
+artifact_kinds:
+  - deterministic-layout
+runtimes:
+  - html-css
+  - typst
+  - pdf
+when_to_use: Single-page restaurant menus that must become print-ready PNG/PDF or deterministic HTML/Typst output.
+avoid_when: Multi-page brochures, digital-only screen menus, unpriced posters, or editable customer templates.
+requires_grammar:
+  - typography
+load_next:
+  deterministic-layout: adapters/deterministic-layout.md
+  typography: typography.md
+  font-packaging: ../../runtimes/font-packaging.md
+```
+
 中文名：印刷菜单版式
 English name: Print Menu Layout
 
@@ -128,13 +147,19 @@ The restaurant name should behave like a headline, not a label:
 - large enough to anchor the composition;
 - set with negative tracking at display sizes;
 - placed with enough margin that it breathes;
-- in the style direction's heading font, not a fallback.
+- in the style direction's packaged display font, not a host fallback.
 
 Section labels are structural markers. They should be visually distinct from
 item names but not compete with the restaurant name.
 
 Item names and prices must be typeset with tabular numerals for price alignment.
 Descriptions are set smaller and in a muted color.
+
+Typography is part of the visual grammar, not an implementation afterthought.
+For the launch font contract and runtime packaging rules, see `typography.md`.
+The consuming project must use packageable open-source fonts as primary
+rendering assets and must not rely on macOS, Windows, or Linux system fonts for
+the intended appearance.
 
 Print-scale sizes (on a 2550 × 3300 canvas):
 
@@ -174,18 +199,18 @@ A style direction defines:
 - text and muted text colors
 - accent and secondary accent
 - rule color and weight
-- heading, body, and accent font stacks
+- display, body, and accent font roles
 - signature detail (the one element that makes the direction memorable)
 - composition model
 
 The four initial directions for Restaurant Menu:
 
-| Direction | Tradition | Signature detail |
-| --- | --- | --- |
-| Warm Cafe | Warm paper | Hand-marked or brush divider |
-| Clean Modern | Editorial restraint | Thin editorial rule system |
-| Retro American | Diner energy | Ticket border and star ornaments |
-| Elegant Classic | Print ceremony | Gold hairline and serif hierarchy |
+| Direction | Tradition | Launch typography | Signature detail |
+| --- | --- | --- | --- |
+| Warm Cafe | Warm paper | Fraunces + Source Sans 3 | Hand-marked or brush divider |
+| Clean Modern | Editorial restraint | Newsreader + IBM Plex Sans | Thin editorial rule system |
+| Retro American | Diner energy | Bowlby One SC + Archivo | Ticket border and star ornaments |
+| Elegant Classic | Print ceremony | Bodoni Moda + Cormorant Garamond | Gold hairline and serif hierarchy |
 
 ## Runtime Adapter Slots
 
@@ -199,7 +224,7 @@ When compiling into a Typst template or deterministic renderer, define:
 - layout density (standard or dense, determined by item count)
 - composition model for this direction
 - signature detail implementation
-- font stacks with system fallbacks
+- packaged display, body, and accent font roles
 - color tokens (background, surface, text, muted, accent, secondary accent, rule)
 
 ## Variants

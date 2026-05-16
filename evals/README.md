@@ -49,5 +49,5 @@ rubrics/anti-ai-template.md
 rubrics/pattern-transfer.md
 ```
 
-Do not add broader visual jobs to the public eval suite until this method is
-stable.
+Keep this suite narrow. Add new suites only when they have their own source
+contract, target runtime, and operator judgment criteria.

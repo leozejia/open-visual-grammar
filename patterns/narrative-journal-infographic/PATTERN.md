@@ -1,5 +1,18 @@
 # Narrative Journal Infographic
 
+```yaml
+id: narrative-journal-infographic
+status: seed
+artifact_kinds:
+  - image-cover
+runtimes:
+  - image-generation
+when_to_use: Handdrawn timelines, workflows, comparisons, system maps, and explainers that need readable structure.
+avoid_when: Pure mood images, hard proof screenshots, strong debate posters, or exact charts.
+load_next:
+  references: refs/README.md
+```
+
 中文名：叙事手账·信息可视化
 English name: Narrative Journal Infographic
 

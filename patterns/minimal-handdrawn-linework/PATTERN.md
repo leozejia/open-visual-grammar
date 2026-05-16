@@ -1,5 +1,18 @@
 # Minimal Handdrawn Linework
 
+```yaml
+id: minimal-handdrawn-linework
+status: seed
+artifact_kinds:
+  - image-cover
+runtimes:
+  - image-generation
+when_to_use: Quiet concept illustrations where clean linework and one clear object or relation can carry the idea.
+avoid_when: Strong public conflict, high-density explainers, realistic proof, or scenes needing heavy emotional force.
+load_next:
+  references: refs/README.md
+```
+
 中文名：简约手绘线稿
 English name: Minimal Handdrawn Linework
 

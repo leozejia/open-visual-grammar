@@ -1,5 +1,18 @@
 # Flowing Gaze Minimal Cover
 
+```yaml
+id: flowing-gaze-minimal-cover
+status: seed
+artifact_kinds:
+  - image-cover
+runtimes:
+  - image-generation
+when_to_use: Quiet covers where one subject, negative space, and a subtle viewpoint should make the reader pause.
+avoid_when: Step-by-step tutorials, high-density information, hot public debate, or product launch visuals.
+load_next:
+  references: refs/README.md
+```
+
 中文名：流动的凝视·极简封面
 English name: Flowing Gaze Minimal Cover
 

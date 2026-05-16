@@ -1,5 +1,18 @@
 # Eastern Texture Handdrawn
 
+```yaml
+id: eastern-texture-handdrawn
+status: seed
+artifact_kinds:
+  - image-cover
+runtimes:
+  - image-generation
+when_to_use: Slow editorial images that need paper texture, loose ink line, whitespace, and reflective metaphor.
+avoid_when: Step-by-step tutorials, hard technical proof, urgent feed warnings, or dense information diagrams.
+load_next:
+  references: refs/README.md
+```
+
 中文名：东方肌理手绘
 English name: Eastern Texture Handdrawn
 

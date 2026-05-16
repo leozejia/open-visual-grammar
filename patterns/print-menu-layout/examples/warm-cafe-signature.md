@@ -46,10 +46,10 @@ Output format:     PNG + PDF
 Output dimensions: 2550 × 3300 px / US Letter portrait
 
 Hierarchy:
-  Level 1 (restaurant name):     182 px, Georgia serif, black, tracking -0.02em
-  Level 2 (section labels):      42 px, Avenir Next sans, semibold
-  Level 3 (item names + prices): 52 px, Avenir Next sans, regular, tabular nums
-  Level 4 (descriptions):        34 px, Avenir Next sans, regular, muted color
+  Level 1 (restaurant name):     182 px, Fraunces, black, tracking -0.02em
+  Level 2 (section labels):      42 px, Source Sans 3, semibold
+  Level 3 (item names + prices): 52 px, Source Sans 3, regular, tabular nums
+  Level 4 (descriptions):        34 px, Source Sans 3, regular, muted color
 
 Style direction:   warm-cafe
   Background:      #c7a46f
@@ -59,8 +59,9 @@ Style direction:   warm-cafe
   Accent:          #c0512f
   Secondary accent: #2f5b4f
   Rule color:      #4d3320
-  Heading font:    Georgia, 'Iowan Old Style', serif
-  Body font:       'Avenir Next', 'Trebuchet MS', sans-serif
+  Display font:    Fraunces
+  Body font:       Source Sans 3
+  Accent font:     Source Sans 3
 
 Composition model: Rule
 Signature detail:  Brush section divider — a thick, slightly irregular

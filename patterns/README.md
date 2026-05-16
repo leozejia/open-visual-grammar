@@ -2,6 +2,14 @@
 
 A pattern is a reusable visual abstraction.
 
+Agents should not start here. Start at:
+
+```text
+../CATALOG.md
+```
+
+Then open one `registry/*.md`, then one pattern.
+
 It is defined by stable visual invariants:
 
 - first read;
@@ -19,6 +27,10 @@ channel.
 Pattern slugs and directories use English kebab-case. Each `PATTERN.md` should
 be bilingual in one file, with Chinese and English names, definition,
 invariants, fit, weak-fit, and avoid rules.
+
+Each `PATTERN.md` begins with a small YAML metadata block for agent routing.
+Keep it small: id, status, artifact kinds, runtimes, when to use, when to avoid,
+and load-next hints.
 
 ## Current Patterns
 

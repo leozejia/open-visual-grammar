@@ -35,6 +35,8 @@ Open Visual Grammar 的顺序更靠前：
 ## 仓库结构
 
 ```text
+CATALOG.md   Agent 入口和路由选择。
+registry/    按交付类型路由。Agent 先打开一个 registry，再进入一个 pattern。
 grammar/     跨 pattern 的视觉语法。只有具体决策需要时再读。
 patterns/    稳定视觉范式。一次只加载一个。
 runtimes/    跨 pattern 的执行约束。
@@ -53,11 +55,13 @@ Pattern slug 使用英文 kebab-case，保证路径、工具调用和 GitHub 链
 渐进披露，不要一次把所有上下文塞进去：
 
 1. 读 `AGENTS.md`。
-2. 从 `patterns/` 里选择一个范式。
-3. 只读这个范式的 `PATTERN.md`。
-4. 需要时再读它的参考图、adapter、反例或案例。
-5. 写出本次任务的 visual score。
-6. 按目标 runtime 编译成 prompt / shader spec / layout spec。
+2. 读 `CATALOG.md`。
+3. 选择一个交付类型，并打开一个 registry 文件。
+4. 如果 registry 里有合适范式，就选择一个范式。
+5. 只读这个范式的 `PATTERN.md`；如果 registry 明确允许 no-pattern 路径，就按 registry 读取 runtime / grammar。
+6. 需要时再读它点名的参考图、adapter、反例、grammar 或 runtime contract。
+7. 写出本次任务的 visual score。
+8. 按目标 runtime 编译成 prompt / shader spec / layout spec。
 
 ## 当前稳定范式
 
@@ -65,19 +69,20 @@ Pattern slug 使用英文 kebab-case，保证路径、工具调用和 GitHub 链
 | --- | --- | --- |
 | `big-character-poster` | canonical | 大标题、公共态度、具体证据、粗粝印刷感、强第一眼。 |
 
-候选范式可以留在 `patterns/` 里作为 seed。只有拥有参考图、边界和至少一个
+候选范式可以留在 `patterns/` 里。只有拥有参考图、边界和至少一个
 有用生产案例后，才进入 canonical 状态。
 
-当前 seed：
+当前候选：
 
-| Pattern | 不变量 |
-| --- | --- |
-| `eastern-texture-handdrawn` | 宣纸肌理、松弛手绘线条、低饱和、隐喻和留白。 |
-| `pixel-retro` | 像素块、复古游戏逻辑、清晰轮廓、极客工具气质。 |
-| `narrative-journal-infographic` | 手绘时间线、对比、流程、注释、可读结构。 |
-| `whimsical-journal-sketch` | 水彩速写、马克笔、拼贴、轻松温暖。 |
-| `flowing-gaze-minimal-cover` | 单一主体、负空间、独特视角、钢笔/蚀刻质感。 |
-| `minimal-handdrawn-linework` | 干净线稿、克制反差、低饱和、高级克制。 |
+| Pattern | 状态 | 不变量 |
+| --- | --- | --- |
+| `print-menu-layout` | candidate | 可打印层级、菜单章节、价格扫读、餐饮印刷气质。 |
+| `eastern-texture-handdrawn` | seed | 宣纸肌理、松弛手绘线条、低饱和、隐喻和留白。 |
+| `pixel-retro` | seed | 像素块、复古游戏逻辑、清晰轮廓、极客工具气质。 |
+| `narrative-journal-infographic` | seed | 手绘时间线、对比、流程、注释、可读结构。 |
+| `whimsical-journal-sketch` | seed | 水彩速写、马克笔、拼贴、轻松温暖。 |
+| `flowing-gaze-minimal-cover` | seed | 单一主体、负空间、独特视角、钢笔/蚀刻质感。 |
+| `minimal-handdrawn-linework` | seed | 干净线稿、克制反差、低饱和、高级克制。 |
 
 ## Evals / 评测
 

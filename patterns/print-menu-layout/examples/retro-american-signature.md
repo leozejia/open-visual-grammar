@@ -49,10 +49,10 @@ Output format:     PNG + PDF
 Output dimensions: 2550 × 3300 px / US Letter portrait
 
 Hierarchy:
-  Level 1 (restaurant name):     168 px, Cooper Black or Arial Black, tracking -0.01em
-  Level 2 (section labels):      40 px, Arial Black, tracking 0.04em uppercase
-  Level 3 (item names + prices): 46 px, Arial Black, regular, tabular nums
-  Level 4 (descriptions):        30 px, Arial Narrow, regular, muted color
+  Level 1 (restaurant name):     168 px, Bowlby One SC, regular, tracking -0.01em
+  Level 2 (section labels):      40 px, Archivo Black, tracking 0.04em uppercase
+  Level 3 (item names + prices): 46 px, Archivo, bold, tabular nums
+  Level 4 (descriptions):        30 px, Archivo, regular, muted color
 
 Style direction:   retro-american
   Background:      #c9281d
@@ -62,8 +62,9 @@ Style direction:   retro-american
   Accent:          #c9281d
   Secondary accent: #f0b12d
   Rule color:      #17120e
-  Heading font:    'Cooper Black', 'Arial Black', Georgia, serif
-  Body font:       'Arial Black', 'Arial Narrow', sans-serif
+  Display font:    Bowlby One SC
+  Body font:       Archivo
+  Accent font:     Archivo Black
 
 Composition model: Frame
 Signature detail:  Thick outer border (14px) in rule color with rounded corners

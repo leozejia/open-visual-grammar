@@ -51,10 +51,10 @@ Output format:     PNG + PDF
 Output dimensions: 2550 × 3300 px / US Letter portrait
 
 Hierarchy:
-  Level 1 (restaurant name):     176 px, Didot or Bodoni 72, regular, tracking -0.02em
-  Level 2 (section labels):      36 px, Avenir Next sans, light, tracking 0.1em uppercase
-  Level 3 (item names + prices): 48 px, Hoefler Text or Palatino serif, regular, tabular nums
-  Level 4 (descriptions):        33 px, Hoefler Text or Palatino serif, italic, muted color
+  Level 1 (restaurant name):     176 px, Bodoni Moda, regular, tracking -0.02em
+  Level 2 (section labels):      36 px, Cormorant Garamond, semibold, tracking 0.1em uppercase
+  Level 3 (item names + prices): 48 px, Cormorant Garamond, regular, tabular nums
+  Level 4 (descriptions):        33 px, Cormorant Garamond, italic, muted color
 
 Style direction:   elegant-classic
   Background:      #12120f
@@ -64,8 +64,9 @@ Style direction:   elegant-classic
   Accent:          #cba258
   Secondary accent: #3c321f
   Rule color:      #a98a4d
-  Heading font:    Didot, 'Bodoni 72', Georgia, serif
-  Body font:       'Hoefler Text', Palatino, Georgia, serif
+  Display font:    Bodoni Moda
+  Body font:       Cormorant Garamond
+  Accent font:     Cormorant Garamond
 
 Composition model: Frame
 Signature detail:  Gold hairline — a 1px or 0.5pt rule in accent color as the
@@ -82,7 +83,7 @@ When this score produces a real output, check:
 
 - Does the dark ground feel like a dining room, not a dark-mode UI?
 - Is the gold hairline the only gold element — no fills, no thick rules?
-- Does the display serif feel like Didot or Bodoni, not like Georgia used as
-  a fallback?
+- Does Bodoni Moda feel like a real high-contrast display serif, not like a
+  generic fallback?
 - Does the light tracking on section labels feel ceremonial, not generic?
 - Would a guest at a formal dinner feel comfortable holding this menu?

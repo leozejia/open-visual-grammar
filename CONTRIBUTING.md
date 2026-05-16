@@ -10,10 +10,10 @@ Create:
 ```text
 patterns/<slug>/
 ├── PATTERN.md
-├── anti-patterns.md
-├── refs/
-├── adapters/
-└── examples/
+├── refs/              optional after operator-approved output
+├── adapters/          optional when a runtime needs special guidance
+├── examples/          optional for reviewed learning
+└── anti-patterns.md   required only for canonical patterns or repeated failures
 ```
 
 Before opening a pull request, make sure the pattern answers:
@@ -23,6 +23,9 @@ Before opening a pull request, make sure the pattern answers:
 - What references prove the pattern?
 - What does it refuse to do?
 - Which runtimes can execute it?
+
+Do not add structure just to satisfy a template. A seed pattern can start with
+only `PATTERN.md` when its invariants and transfer boundaries are clear.
 
 ## Add an example
 

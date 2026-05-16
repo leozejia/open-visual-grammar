@@ -35,6 +35,8 @@ Open Visual Grammar starts earlier:
 ## Repository Map
 
 ```text
+CATALOG.md   Agent entry point and route selector.
+registry/    Artifact-kind routing. Agents open one registry before one pattern.
 grammar/     Cross-pattern visual language. Read only when a decision needs it.
 patterns/    Stable visual patterns. Load one pattern at a time.
 runtimes/    Cross-pattern execution constraints.
@@ -55,11 +57,15 @@ and English are both first-class operating languages.
 Use progressive disclosure:
 
 1. Read `AGENTS.md`.
-2. Choose exactly one pattern from `patterns/`.
-3. Read that pattern's `PATTERN.md`.
-4. Open references, adapters, anti-patterns, or examples only when needed.
-5. Produce a task-specific score.
-6. Compile the score into the requested runtime.
+2. Read `CATALOG.md`.
+3. Choose one artifact kind and open one registry file.
+4. Choose one routed pattern when the registry provides a fit.
+5. Read that pattern's `PATTERN.md`, or follow the registry's no-pattern route
+   when it explicitly allows one.
+6. Open references, adapters, anti-patterns, grammar, or runtime contracts only
+   when the route or pattern names them.
+7. Produce a task-specific score.
+8. Compile the score into the requested runtime.
 
 Do not load the whole repository into context.
 

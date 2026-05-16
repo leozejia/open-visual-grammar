@@ -99,8 +99,8 @@ variant.
 token base.
 
 **Correction:** All four variants of a direction must share the same color
-tokens, font stacks, and signature detail. Variants differ only in spacing,
-type scale, and decoration density — not in color or typeface.
+tokens, font role mapping, and signature detail. Variants differ only in
+spacing, type scale, and decoration density — not in color or typeface.
 
 ---
 
@@ -116,3 +116,20 @@ model is specified.
 two-column structure. Centering is appropriate only for the restaurant name
 in ceremonial directions (Elegant Classic) and only when the rest of the
 layout provides a clear left-aligned scanning path.
+
+---
+
+## 9. Host Font Drift
+
+**What it looks like:** The same order looks refined on the designer's Mac but
+generic or metrically different on the Linux production server. Line breaks,
+title width, and section rhythm shift even though the tokens did not change.
+
+**Why it happens:** The renderer relies on system fonts or broad fallback
+stacks. Local output uses faces such as Didot, Hoefler Text, Avenir Next, or
+Cooper Black, while production substitutes unrelated fonts.
+
+**Correction:** Package the selected open-source fonts and load them from an
+explicit runtime font path. Treat missing primary fonts as a QA failure. Do not
+promote a menu direction until local and production PNG/PDF output use the same
+font files.
