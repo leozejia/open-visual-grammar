@@ -81,6 +81,19 @@ evals/rubrics/<rubric-slug>.md
 A rubric should help an operator judge outputs consistently. It should include
 strong signals, weak signals, and review questions.
 
+## Promote an external reference
+
+Before promoting material from X, a bookmark folder, a website, or any private
+intake workflow, follow:
+
+```text
+docs/reference-intake-protocol.md
+```
+
+Do not commit raw collections. Promote only the public-safe learning that
+improves a pattern, example, anti-pattern, eval, grammar file, runtime contract,
+or decision record.
+
 ## Public-safety rules
 
 Do not commit:

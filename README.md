@@ -105,6 +105,16 @@ Generated candidates and runtime prompts belong in the consuming project's work
 folder. Only reviewed learning should flow back into this repository as
 anti-patterns, adapters, or pattern-local examples.
 
+## Reference Intake
+
+External references may inform OVG, but raw collections do not belong here. Use
+`docs/reference-intake-protocol.md` when promoting learning from X bookmarks,
+websites, image collections, or private source-intake workflows.
+
+The public repository accepts reviewed method-level learning only: references
+that calibrate a pattern, examples with critique, anti-patterns, eval cases,
+rubrics, grammar changes, or runtime constraints.
+
 ## What Belongs Here
 
 - Stable visual patterns.
